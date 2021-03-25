@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+.container{
     
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid #babbbb 5px;
+    border-bottom: solid #D3C7DE 5px;
 }
 
 section {
@@ -32,17 +32,54 @@ section {
     background-color: white;
     border-radius: 30px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-section div {
+.content {
+    height: 520px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+section .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .to-do {
+    /* font-family: 'Raleway', sans-serif; */
     background-color: #CBE2F6;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 87%;
     margin: 10px 0;
+    opacity: 0.8;
 }
 
 input {
+    width: 90%;
     border: none;
     outline: none;
-    /* opacity: 0; */
+    background-color: #CBE2F6;
+    margin: 15px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.task i {
+    font-size: 20px;
+}
+
+.insert {
+    align-self: flex-end;
+}
+
+.insert i {
+    font-size: 36px;
+    color: #CBE2F6;
 }
