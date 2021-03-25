@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-.container{
+.container {
     
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* font-family: 'Raleway', sans-serif; */
@@ -38,7 +38,7 @@ section {
 }
 
 .content {
-    height: 520px;
+    height: 500px;
 }
 
 section h2 {
@@ -71,15 +71,33 @@ input {
 
 }
 
+#delete {
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .task i {
     font-size: 20px;
 }
 
-.insert {
+#insert {
     align-self: flex-end;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #CBE2F6;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    color: #fff;
 }
 
-.insert i {
-    font-size: 36px;
-    color: #CBE2F6;
+#insert:hover {
+    background-color: #8dc7fa;
 }
