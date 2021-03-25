@@ -1,6 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .startPage{
     width: 414px;
-    height: 736px;
+    height: 709px;
     background: url(./images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +17,7 @@
     width: 238px;
     height: 57px;
     margin-top: 550px;
-    margin-left: 80px;
+    margin-left: 88px;
     background-color: #c8e3f6;
     padding-top: 10px;
     padding-bottom: 55px;
