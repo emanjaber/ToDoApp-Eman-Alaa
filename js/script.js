@@ -1,5 +1,7 @@
 let todos = [];
-const todoInput = document.getElementsByClassName('Basic');
+var todoInput = document.getElementById('Basic').textContent;
+// var myInput = todoInput.textContent;
+const toDoList = document.getElementById('myToDoList');
 const insertInput = document.getElementById('insert');
 let listContainer = document.querySelector("myToDoList")
 
@@ -19,7 +21,7 @@ insertInput.addEventListener("click" , addTodo);
   
 function addTodo(item){
 
-  if (todoInput.value !== "") {
+  if (todoInput !== "") {
   let myStore = JSON.parse(localStorage.getItem("myTasks"));
       if(myStore !== null){
           myStore.push(todoInput.value);
