@@ -1,57 +1,55 @@
-
-// Create a new list item when clicking on the "Add" button
+// Create a new list item when clicking on the "+" button
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("Basic").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
+  var divToDo = document.createElement("p");
+
+  divToDo.appendChild(t);
+  if (inputValue === "") {
+    alert("Nothing to add! Write your task");
   } else {
     document.getElementById("myToDoList").appendChild(li);
   }
   document.getElementById("Basic").value = "";
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+//  Add a delete icon with every list item created
+  var delBtn = document.createElement("button");
+  var delI = document.createElement("i");
+  divToDo.className = "task";
+  delBtn.className = "close";
+  delI.className = "far fa-trash-alt";
+  delBtn.appendChild(delI);
+
+  li.appendChild(divToDo);
+  li.appendChild(delBtn);
 
   for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+    close[i].onclick = function () {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
-}
-
-
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "P") {
+      ev.target.classList.toggle("checked");
+    }
+  },
+  false
+);
 
-// Click on a close button to hide the current list item
+// Click on a delete icon to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
+  close[i].onclick = function () {
     var div = this.parentElement;
     div.style.display = "none";
-  }
+  };
 }
