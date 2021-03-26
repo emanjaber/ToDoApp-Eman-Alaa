@@ -32,7 +32,7 @@
           <h2>Your To-Do</h2>
           <div class="task">
             <div class="to-do">
-              <input type="text" placeholder="Write here ..." />
+              <input id="Basic" type="text" placeholder="Write here ..." />
             </div>
 
             <!-- delete button -->
@@ -40,11 +40,15 @@
               <i class="far fa-trash-alt"></i>
             </button>
           </div>
-        </div>
+          <ul id="myToDoList">
 
+          </ul>
+
+        </div>
         <!-- add button -->
-        <button id="insert">+</button>
+        <button id="insert" onclick="newElement()" class="addBtn">+</button>
       </section>
     </div>
+    <script src="/js/scriptN.js"></script>
   </body>
 </html>
